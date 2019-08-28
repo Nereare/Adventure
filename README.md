@@ -10,10 +10,10 @@ Foo.
 
 1. Get [the code]();
 2. Have these installed:
-  1. [Ruby](https://www.ruby-lang.org);
-  2. [Bundler](https://bundler.io/).
+    1. [Ruby](https://www.ruby-lang.org);
+    2. [Bundler](https://bundler.io/).
 3. Installing dependencies:
-  1. Run `bundle install`.
+    1. Run `bundle install`.
 
 ## Contributing
 
