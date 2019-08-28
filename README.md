@@ -8,7 +8,7 @@ Foo.
 
 ## Running
 
-1. Get [the code]();
+1. Get [the code](https://github.com/Nereare/Adventure/archive/master.zip);
 2. Have these installed:
     1. [Ruby](https://www.ruby-lang.org);
     2. [Bundler](https://bundler.io/).
