@@ -1,12 +1,10 @@
 # Adventure
 
-[![Version](https://img.shields.io/badge/version-0.1.0-lightgrey)](https://github.com/Nereare/Adventure)
-[![License](https://img.shields.io/badge/license-WTFPL-blue)](LICENSE.md)
+[![Gem](https://img.shields.io/gem/v/Adventure)](https://github.com/Nereare/Adventure)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE-OF-CONDUCT.md)
 
-[![Gem Version](https://badge.fury.io/rb/marky_markov.svg)](https://badge.fury.io/rb/marky_markov)
-
-Foo.
+A random adventure generator for D&D 5e.
 
 ## Running
 
@@ -39,18 +37,6 @@ This project uses [SemVer](http://semver.org/) for versioning. For the versions 
 
 ## Legal Stuff
 
-[![WTF Public License](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)](LICENSE.md)
+[![MIT License](https://i.imgur.com/Ze3dFob.png)](LICENSE.md)
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
-
-Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
-
-Everyone is permitted to copy and distribute verbatim or modified
-copies of this license document, and changing it is allowed as long
-as the name is changed.
-
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-0. You just DO WHAT THE FUCK YOU WANT TO.
+This project is available under the [MIT License](https://opensource.org/licenses/MIT)
