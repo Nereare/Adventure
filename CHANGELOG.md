@@ -37,4 +37,10 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - Pull request.
 * ReadMe file.
 * Changelog file.
-* ...
+* Begin gem folder structure, using [Bundler](https://bundler.io/) `v2.0.2`.
+* Development dependencies:
+  - [Bundler](https://bundler.io/), `v2.0.2`;
+  - [Rake](https://github.com/ruby/rake), `v10.5.0`;
+  - [RSpec](https://rspec.info/), `v3.8.0`.
+* Dependencies:
+  - [Marky Markov](https://rubygems.org/gems/marky_markov) gem, `v0.3.5`.
