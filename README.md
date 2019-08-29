@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/badge/license-WTFPL-blue)](LICENSE.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE-OF-CONDUCT.md)
 
+[![Gem Version](https://badge.fury.io/rb/marky_markov.svg)](https://badge.fury.io/rb/marky_markov)
+
 Foo.
 
 ## Running
