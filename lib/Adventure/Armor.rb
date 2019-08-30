@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Adventure
   class Armor
     attr_accessor :name, :type, :ac, :max_dex, :price, :weight, :disadvantage
@@ -13,7 +15,7 @@ module Adventure
     end
 
     def AC(dex_mod, shield = false)
-      return @ac + [@max_dex, dex_mod].min + (shield ? 2 : 0).to_i
+      @ac + [@max_dex, dex_mod].min + (shield ? 2 : 0).to_i
     end
   end
 end

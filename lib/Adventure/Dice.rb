@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module Adventure
   class Dice
-
     def self.roll(str)
       number, die = str.scan(/\d{1,3}/)
       sum = 0
@@ -8,12 +9,12 @@ module Adventure
         b = rand(1..die.to_i)
         sum += b
       end
-      return sum
+      sum
     end
 
     def self.dropLowest
       ar = [0, 0, 0, 0]
-      ar.each_with_index do |k, i|
+      ar.each_with_index do |_k, i|
         ar[i] = rand(1..6)
       end
       del = ar.delete(ar.min)
@@ -22,15 +23,15 @@ module Adventure
         sum += k
       end
       sum += del * (3 - ar.count)
-      return sum
+      sum
     end
 
     def self.dropLowestArray
       ar = [0, 0, 0, 0, 0, 0]
-      ar.each_with_index do |k, i|
-        ar[i] = self.dropLowest
+      ar.each_with_index do |_k, i|
+        ar[i] = dropLowest
       end
-      return ar
+      ar
     end
 
     def self.straight
@@ -38,16 +39,15 @@ module Adventure
       3.times do
         sum += rand(1..6)
       end
-      return sum
+      sum
     end
 
     def self.straightArray
       ar = [0, 0, 0, 0, 0, 0]
-      ar.each_with_index do |k, i|
-        ar[i] = self.straight
+      ar.each_with_index do |_k, i|
+        ar[i] = straight
       end
-      return ar
+      ar
     end
-
   end
 end

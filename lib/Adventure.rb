@@ -1,10 +1,12 @@
-require "Adventure/version"
+# frozen_string_literal: true
 
-require "Adventure/Armor"
-require "Adventure/Class"
-require "Adventure/Dice"
-require "Adventure/NPC"
-require "Adventure/Weapon"
+require 'Adventure/version'
+
+require 'Adventure/Armor'
+require 'Adventure/Class'
+require 'Adventure/Dice'
+require 'Adventure/NPC'
+require 'Adventure/Weapon'
 
 module Adventure
   class Error < StandardError; end
