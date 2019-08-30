@@ -41,6 +41,7 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
 * Development dependencies:
   - [Bundler](https://bundler.io/), `v2.0.2`;
   - [Rake](https://github.com/ruby/rake), `v10.5.0`;
-  - [RSpec](https://rspec.info/), `v3.8.0`.
+  - [RSpec](https://rspec.info/), `v3.8.0`;
+  - [RuboCop](https://github.com/rubocop-hq/rubocop), `v0.74.0`.
 * Dependencies:
   - [Marky Markov](https://rubygems.org/gems/marky_markov) gem, `v0.3.5`.
