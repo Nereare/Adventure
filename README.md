@@ -40,3 +40,7 @@ This project uses [SemVer](http://semver.org/) for versioning. For the versions 
 [![MIT License](https://i.imgur.com/Ze3dFob.png)](LICENSE.md)
 
 This project is available under the [MIT License](https://opensource.org/licenses/MIT)
+
+[![d20 Logo](https://i.imgur.com/8CG0VEv.png)](OGL.md)
+
+`d20 System` and the `d20 System` logo are trademarks of Wizards of the Coast, Inc. and are used according to the terms of the d20 System License. A copy of this License can be found at [www.wizards.com](https://dnd.wizards.com/articles/features/systems-reference-document-srd).
