@@ -15,15 +15,16 @@ module Adventure
                    stealth_disadvantage = false)
       @name         = name
       @type         = type
-      @armor_class  = armor_class
+      @armor_class  = armor_class.to_i
       @max_dex      = dex
       @price        = price
       @weight       = weight
       @disadvantage = stealth_disadvantage
     end
 
-    def get_armor_class(dex_mod, shield = false)
-      @armor_class + [@max_dex, dex_mod].min + (shield ? 2 : 0).to_i
+    def get_armor_class(dex_mod)
+      type = @type.downcase
+      @armor_class + [@max_dex, dex_mod].min + (type == 'shield' ? 2 : 0).to_i
     end
   end
 end
