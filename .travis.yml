@@ -2,7 +2,7 @@ sudo: false
 
 language: ruby
 rvm:
-  - 2.5.5
+  - 2.5.3
 
 before_install: gem install bundler -v 2.0.2
 install: bundle install --retry=3
