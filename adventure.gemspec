@@ -6,7 +6,7 @@ require 'adventure/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'Adventure'
-  spec.version       = Adventure.VERSION
+  spec.version       = Adventure.version
   spec.authors       = ['Igor Padoim']
   spec.email         = ['igorpadoim@gmail.com']
 
