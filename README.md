@@ -4,6 +4,7 @@
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Nereare/Adventure)](https://github.com/Nereare/Adventure/releases)
 [![GitHub License](https://img.shields.io/github/license/Nereare/Adventure)](LICENSE.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE-OF-CONDUCT.md)
+[![Build Status](https://travis-ci.org/Nereare/Adventure.svg?branch=master)](https://travis-ci.org/Nereare/Adventure)
 
 A random adventure generator for D&D 5e.
 
