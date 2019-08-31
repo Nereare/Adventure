@@ -45,3 +45,6 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - [RuboCop](https://github.com/rubocop-hq/rubocop), `v0.74.0`.
 * Dependencies:
   - [Marky Markov](https://rubygems.org/gems/marky_markov) gem, `v0.3.5`.
+* Modules:
+  - Base module (`Adventure`);
+  - `Armors` module, defining SRD armors.
