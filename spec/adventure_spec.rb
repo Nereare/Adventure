@@ -45,7 +45,9 @@ RSpec.describe Adventure do
     expect(Adventure::Dice.straight_array).to be_a(Array)
   end
 
-  # it 'does something useful' do
-  #  expect(false).to eq(true)
-  # end
+  ####################
+  # NPC Class Checks #
+  ####################
+  # @todo Create NPC class checks
+  # @body Create tests for the NPC class, once you created Race and RPGClass classes.
 end
