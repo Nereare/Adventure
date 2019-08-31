@@ -1,10 +1,20 @@
 # frozen_string_literal: true
 
 module Adventure
+  # This defines a weapon entity.
   class Weapon
-    attr_accessor :name, :type, :damage, :damage_type, :weight, :price, :finesse, :note, :ranged
+    attr_accessor :name, :type, :damage, :damage_type, :weight, :price
+    attr_accessor :finesse, :note, :ranged
 
-    def initialize(name, type, damage, damage_type, weight, price, finesse, note, ranged = false)
+    def initialize(name,
+                   type,
+                   damage,
+                   damage_type,
+                   weight,
+                   price,
+                   finesse,
+                   note,
+                   ranged = false)
       @name        = name
       @type        = type
       @damage      = damage
@@ -16,24 +26,7 @@ module Adventure
       @ranged      = ranged
     end
 
-    def description(str_mod, dex_mod, proficiency, format = 'plain')
-      bold_open    = ''
-      bold_close   = ''
-      italic_open  = ''
-      italic_close = ''
-      case format
-      when 'html'
-        bold_open = '<strong>'
-        bold_close = '</strong>'
-        italic_open = '<em>'
-        italic_close = '</em>'
-      when 'md'
-        bold_open = '**'
-        bold_close = '**'
-        italic_open = '**'
-        italic_close = '**'
-      end
-
+    def description(str_mod, dex_mod, proficiency)
       to_hit = if @ranged
                  dex_mod + proficiency
                elsif @finesse
@@ -42,10 +35,9 @@ module Adventure
                  str_mod + proficiency
                end
 
-      desc = "#{bold_open}#{@name}:#{bold_close} #{@type} Attack: "\
-             "#{to_hit.positive? ? '+' : ''}#{to_hit} to hit. Hit #{@damage} "\
-             "#{@damage_type} damage. #{@note}."
-      desc
+      d = "#{@name}: #{@type} Attack: #{to_hit.positive? ? '+' : ''}"\
+          "#{to_hit} to hit. Hit #{@damage} #{@damage_type} damage. #{@note}."
+      d
     end
   end
 end

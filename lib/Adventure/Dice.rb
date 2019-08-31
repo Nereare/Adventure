@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Adventure
+  # Defines actions from dice rolls.
   class Dice
     def self.roll(str)
       number, die = str.scan(/\d{1,3}/)
@@ -12,21 +13,17 @@ module Adventure
       sum
     end
 
-    def self.dropLowest
+    def self.drop_lowest
       ar = [0, 0, 0, 0]
-      ar.each_with_index do |_k, i|
-        ar[i] = rand(1..6)
-      end
+      ar.each_with_index { |_k, i| ar[i] = rand(1..6) }
       del = ar.delete(ar.min)
       sum = 0
-      ar.each do |k|
-        sum += k
-      end
+      ar.each { |k| sum += k }
       sum += del * (3 - ar.count)
       sum
     end
 
-    def self.dropLowestArray
+    def self.drop_lowest_array
       ar = [0, 0, 0, 0, 0, 0]
       ar.each_with_index do |_k, i|
         ar[i] = dropLowest
@@ -42,7 +39,7 @@ module Adventure
       sum
     end
 
-    def self.straightArray
+    def self.straight_array
       ar = [0, 0, 0, 0, 0, 0]
       ar.each_with_index do |_k, i|
         ar[i] = straight
