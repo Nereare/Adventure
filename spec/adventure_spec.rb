@@ -4,7 +4,7 @@ require 'Adventure'
 
 RSpec.describe Adventure do
   it 'has a version number' do
-    expect(Adventure::VERSION).not_to be nil
+    expect(Adventure.VERSION).not_to be nil
   end
 end
 
