@@ -3,16 +3,12 @@
 require 'Adventure'
 
 RSpec.describe Adventure do
-  ###############
-  # Meta Checks #
-  ###############
   it 'has a version number' do
     expect(Adventure::VERSION).not_to be nil
   end
+end
 
-  ######################
-  # Armor Class Checks #
-  ######################
+RSpec.describe Adventure::Armor do
   it 'defines armors' do
     armor = Adventure::Armor.new('Test Armor',
                                  'Test Type',
@@ -32,10 +28,9 @@ RSpec.describe Adventure do
                                   6)
     expect(shield.get_armor_class(4)).to eq(2)
   end
+end
 
-  #####################
-  # Dice Class Checks #
-  #####################
+RSpec.describe Adventure::Dice do
   it 'rolls dice' do
     expect(Adventure::Dice.roll('1d6')).to be_a(Integer)
   end
@@ -44,10 +39,12 @@ RSpec.describe Adventure do
     expect(Adventure::Dice.drop_lowest_array).to be_a(Array)
     expect(Adventure::Dice.straight_array).to be_a(Array)
   end
+end
 
+RSpec.describe Adventure::NPC do
   ####################
   # NPC Class Checks #
   ####################
   # @todo Create NPC class checks
-  # @body Create tests for the NPC class, once you created Race and RPGClass classes.
+  # @body Create tests for the NPC class, once you created Race and RPGClass.
 end
