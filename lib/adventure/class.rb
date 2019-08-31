@@ -5,7 +5,7 @@ module Adventure
   class RPGClass
     attr_accessor :hd, :proficiency
 
-    # @todo: Define RPGClass class
-    # @body: Begin the class definition class.
+    # @todo Define RPGClass class
+    # @body Begin the class definition class.
   end
 end
