@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'Adventure'
+require 'adventure'
 
 RSpec.describe Adventure do
   it 'has a version number' do
