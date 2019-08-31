@@ -26,7 +26,7 @@ module Adventure
     def self.drop_lowest_array
       ar = [0, 0, 0, 0, 0, 0]
       ar.each_with_index do |_k, i|
-        ar[i] = dropLowest
+        ar[i] = drop_lowest
       end
       ar
     end
