@@ -25,74 +25,11 @@ module Adventure
                    immunities = '')
       check_params(race, clas, extra_languages, weapons, inventory, money)
 
-      @name   = name
-      @race   = race
-      @clas   = clas
-      @level  = level.to_i
-      @align  = align
-      @senses = senses
-
+      set_base(name, level, align, race, clas)
       @str, @dex, @con, @int, @wis, @cha = stats
-
-      @resistances = resistances
-      @immunities  = immunities
-
+      set_special_abilities(senses, resistances, immunities)
       new_hp
-
-      @money = money
-
-      @speed = @race.speed
-
-      @armor = armor
-      @weapons = weapons
-      @inventory = inventory
-    end
-
-    def check_params(race,
-                     clas,
-                     extra_languages,
-                     weapons,
-                     inventory,
-                     money)
-      race_ok? race, 'Race argument is not a Race class'
-      class_ok? clas, 'Class argument is not a Class class'
-      languages_ok? extra_languages, 'Extra languages argument is not an Array'
-      weapons_ok? weapons, 'Weapons argument is not an Array'
-      inventory_ok? inventory, 'Inventory argument is not an Array'
-      money_ok? money, 'Money argument must define all four currencies'
-
-      true
-    end
-
-    def race_ok?(race, msg)
-      raise ArgumentError, msg.to_s unless race.is_a? Adventure::Race
-    end
-
-    def class_ok?(clas, msg)
-      raise ArgumentError, msg.to_s unless clas.is_a? Adventure::RPGClass
-    end
-
-    def languages_ok?(extra_languages, msg)
-      raise ArgumentError, msg.to_s unless extra_languages.is_a? Array
-    end
-
-    def weapons_ok?(weapons, msg)
-      raise ArgumentError, msg.to_s unless weapons.is_a? Array
-    end
-
-    def inventory_ok?(inventory, msg)
-      raise ArgumentError, msg.to_s unless inventory.is_a? Array
-    end
-
-    def money_ok?(money, msg)
-      plat_gold = money.respond_to?[:pp] && money.respond_to?[:gp]
-      silv_copp = money.respond_to?[:sp] && money.respond_to?[:cp]
-      raise ArgumentError, msg.to_s unless plat_gold && silv_copp
-    end
-
-    def new_hp
-      @hp = Adventure::Dice.roll(@level.to_s + @clas.hd)
-      @hp += get_modif(@con).to_i * @level.to_i
+      set_possessions(money, armor, weapons, inventory)
     end
 
     def get_modif(score)
@@ -120,6 +57,78 @@ module Adventure
           "#{cp ? cp.to_s + 'cp, ' : ''}"
 
       s.chomp!(', ').concat(')')
+    end
+
+    # PRIVATE METHODS BELOW
+    private
+
+    def set_base(name, level, align, race, clas)
+      @name = name
+      @level = level.to_i
+      @align = align
+      @race = race
+      @clas = clas
+      @speed = @race.speed
+
+      true
+    end
+
+    def set_special_abilities(senses, resistances, immunities)
+      @senses = senses
+      @resistances = resistances
+      @immunities = immunities
+    end
+
+    def set_possessions(money, armor, weapons, inventory)
+      @money = money
+      @armor = armor
+      @weapons = weapons
+      @inventory = inventory
+    end
+
+    def new_hp
+      @hp = Adventure::Dice.roll(@level.to_s + @clas.hd)
+      @hp += get_modif(@con).to_i * @level.to_i
+    end
+
+    def check_params(race,
+                     clas,
+                     extra_languages,
+                     weapons,
+                     inventory,
+                     money)
+      race_ok? race, 'Race argument is not a Race class'
+      class_ok? clas, 'Class argument is not a Class class'
+      languages_ok? extra_languages, 'Extra languages argument is not an Array'
+      weapons_ok? weapons, 'Weapons argument is not an Array'
+      inventory_ok? inventory, 'Inventory argument is not an Array'
+      money_ok? money, 'Money argument must define all four currencies'
+    end
+
+    def race_ok?(race, msg)
+      raise ArgumentError, msg.to_s unless race.is_a? Adventure::Race
+    end
+
+    def class_ok?(clas, msg)
+      raise ArgumentError, msg.to_s unless clas.is_a? Adventure::RPGClass
+    end
+
+    def languages_ok?(extra_languages, msg)
+      raise ArgumentError, msg.to_s unless extra_languages.is_a? Array
+    end
+
+    def weapons_ok?(weapons, msg)
+      raise ArgumentError, msg.to_s unless weapons.is_a? Array
+    end
+
+    def inventory_ok?(inventory, msg)
+      raise ArgumentError, msg.to_s unless inventory.is_a? Array
+    end
+
+    def money_ok?(money, msg)
+      plat_gold = money.respond_to?[:pp] && money.respond_to?[:gp]
+      silv_copp = money.respond_to?[:sp] && money.respond_to?[:cp]
+      raise ArgumentError, msg.to_s unless plat_gold && silv_copp
     end
   end
 end
