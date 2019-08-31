@@ -47,4 +47,5 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - [Marky Markov](https://rubygems.org/gems/marky_markov) gem, `v0.3.5`.
 * Modules:
   - Base module (`Adventure`);
-  - `Armors` module, defining SRD armors.
+  - `Armors` module, defining SRD armors;
+  - `Weapons` module, defining SRD armors.
