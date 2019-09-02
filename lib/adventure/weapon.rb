@@ -27,17 +27,24 @@ module Adventure
     end
 
     def description(str_mod, dex_mod, proficiency)
-      to_hit = if @ranged
-                 dex_mod + proficiency
-               elsif @finesse
-                 [dex_mod, str_mod].max + proficiency
-               else
-                 str_mod + proficiency
-               end
-
-      d = "#{@name}: #{@type} Attack: #{to_hit.positive? ? '+' : ''}"\
-          "#{to_hit} to hit. Hit #{@damage} #{@damage_type} damage. #{@note}."
+      hit = to_hit(str_mod, dex_mod, proficiency)
+      d = "#{@name}: #{@type} Attack: #{hit.positive? ? '+' : ''}"\
+          "#{hit} to hit. Hit #{@damage} #{@damage_type} damage. #{@note}."
       d
+    end
+
+    def to_hit(str_mod, dex_mod, proficiency)
+      str_mod     = str_mod.to_i
+      dex_mod     = dex_mod.to_i
+      proficiency = proficiency.to_i
+
+      if @ranged
+        dex_mod + proficiency
+      elsif @finesse
+        [dex_mod, str_mod].max + proficiency
+      else
+        str_mod + proficiency
+      end
     end
   end
 end
