@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Adventure
-  # Defines an NPC entity
+  # Defines an NPC entity. Do note that NPCs are not used on the app as of now.
   class NPC
     attr_accessor :name, :race, :clas, :str, :dex, :con, :int, :wis, :cha
     attr_accessor :speed, :align, :hp, :languages, :resistances, :immunities
