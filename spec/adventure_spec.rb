@@ -48,3 +48,18 @@ RSpec.describe Adventure::NPC do
   # @todo Create NPC class checks
   # @body Create tests for the NPC class, once you created Race and RPGClass.
 end
+
+RSpec.describe Adventure::Weapon do
+  it 'defines weapons' do
+    weapon = Adventure::Weapon.new('Test Weapon',
+                                   'Test Type',
+                                   '1d6',
+                                   'Test Damage Type',
+                                   1,
+                                   12,
+                                   true,
+                                   '')
+    expect(weapon.to_hit(2, 4, 2)).to be_a(Integer)
+    expect(weapon.description(2, 4, 2)).to be_a(String)
+  end
+end
