@@ -51,5 +51,6 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - `Armors` module, defining SRD armors;
   - `NameGen` module, for generating random names, and its sample names for:
     - Dragonborns;
-    - Elves.
+    - Dwarves;
+    - Elves;
   - `Weapons` module, defining SRD armors.
