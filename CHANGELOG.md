@@ -49,4 +49,5 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
 * Modules:
   - Base module (`Adventure`);
   - `Armors` module, defining SRD armors;
+  - `NameGen` module, for generating random names;
   - `Weapons` module, defining SRD armors.
