@@ -53,4 +53,5 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
     - Dragonborns;
     - Dwarves;
     - Elves;
+    - Gnomes;
   - `Weapons` module, defining SRD armors.
