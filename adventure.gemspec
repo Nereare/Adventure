@@ -33,5 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 
-  spec.add_dependency 'marky_markov', '~> 0.3.5'
+  spec.add_dependency 'random_name_generator', '~> 1.0.3'
 end

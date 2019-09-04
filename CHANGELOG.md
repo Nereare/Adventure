@@ -45,13 +45,11 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - [RuboCop](https://github.com/rubocop-hq/rubocop), `v0.74.0`;
   - [SimpleCov](https://github.com/colszowka/simplecov), `v0.17.0`.
 * Dependencies:
-  - [Marky Markov](https://rubygems.org/gems/marky_markov) gem, `v0.3.5`.
+  - [Random Name Generator](https://rubygems.org/gems/random_name_generator) gem, `v1.0.3`.
 * Modules:
   - Base module (`Adventure`);
   - `Armors` module, defining SRD armors;
-  - `NameGen` module, for generating random names, and its sample names for:
-    - Dragonborns;
-    - Dwarves;
-    - Elves;
-    - Gnomes;
   - `Weapons` module, defining SRD armors.
+
+### Changed
+* Name generator from homebrewed adaptation of `marky_markov`'s code to `random_name_generator` gem.
