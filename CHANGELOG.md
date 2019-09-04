@@ -48,8 +48,11 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - [Random Name Generator](https://rubygems.org/gems/random_name_generator) gem, `v1.0.3`.
 * Modules:
   - Base module (`Adventure`);
-  - `Armors` module, defining SRD armors;
-  - `Weapons` module, defining SRD armors.
 
 ### Changed
 * Name generator from homebrewed adaptation of `marky_markov`'s code to `random_name_generator` gem.
+
+### Removed
+* Former base module, defining some d20 system entities;
+* `Armors` module, defining SRD armors;
+* `Weapons` module, defining SRD armors.
