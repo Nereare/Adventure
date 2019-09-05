@@ -2,6 +2,8 @@
 
 require 'adventure/version'
 
+require 'adventure/settlement'
+
 module Adventure
   class Error < StandardError; end
   # Your code goes here...

@@ -45,9 +45,11 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - [RuboCop](https://github.com/rubocop-hq/rubocop), `v0.74.0`;
   - [SimpleCov](https://github.com/colszowka/simplecov), `v0.17.0`.
 * Dependencies:
+  - [indefinite Article](https://rubygems.org/gems/indefinite_article) gem, `v0.2.4`;
   - [Random Name Generator](https://rubygems.org/gems/random_name_generator) gem, `v1.0.3`.
 * Modules:
-  - Base module (`Adventure`);
+  - Base module (`Adventure`):
+    - `Settlement` class, for creating settlements and their contents.
 
 ### Changed
 * Name generator from homebrewed adaptation of `marky_markov`'s code to `random_name_generator` gem.
