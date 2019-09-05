@@ -2,7 +2,7 @@
 
 # Sets the current version of the gem
 module Adventure
-  @version = '0.10.2'
+  @version = '0.11.2'
 
   def self.version
     @version

@@ -49,6 +49,7 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - [Random Name Generator](https://rubygems.org/gems/random_name_generator) gem, `v1.0.3`.
 * Modules:
   - Base module (`Adventure`):
+    - `Actor` class, for creating NPC descriptions;
     - `Settlement` class, for creating settlements and their contents.
 
 ### Changed
