@@ -21,7 +21,7 @@ module Adventure
     end
 
     def description
-      "#{desc_header}\n\n#{desc_owner}\n\n#{@desc}\n\n#{desc_quests}"
+      "#{desc_header}\n\n#{desc_owner}\n\n#{@desc}"
     end
 
     private
