@@ -43,7 +43,8 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - [Rake](https://github.com/ruby/rake), `v10.5.0`;
   - [RSpec](https://rspec.info/), `v3.8.0`;
   - [RuboCop](https://github.com/rubocop-hq/rubocop), `v0.74.0`;
-  - [SimpleCov](https://github.com/colszowka/simplecov), `v0.17.0`.
+  - [SimpleCov](https://github.com/colszowka/simplecov), `v0.17.0`;
+  - [YARD](https://rubygems.org/gems/yard), `v0.9.20`.
 * Dependencies:
   - [Indefinite Article](https://rubygems.org/gems/indefinite_article) gem, `v0.2.4`;
   - [Random Name Generator](https://rubygems.org/gems/random_name_generator) gem, `v1.0.3`;

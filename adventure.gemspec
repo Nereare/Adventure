@@ -2,7 +2,7 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'adventure/version'
+require 'adventure'
 
 Gem::Specification.new do |spec|
   spec.name          = 'Adventure'
@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 12.3'
   spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'yard', '~> 0.9.20'
 
   spec.add_dependency 'indefinite_article', '~> 0.2.4'
   spec.add_dependency 'random_name_generator', '~> 1.0.3'
