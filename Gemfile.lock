@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Adventure (0.13.3)
+    Adventure (0.14.3)
       indefinite_article (~> 0.2.4)
       random_name_generator (~> 1.0.3)
       slugify (~> 1.0.6)
