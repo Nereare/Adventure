@@ -8,6 +8,14 @@ module Adventure
     attr_reader :id, :name, :lit, :description, :encounter
     attr_reader :north, :south, :east, :west, :up, :down
 
+    # Creates a new room.
+    #
+    # @param name [String] The name of the Room.
+    # @param description [String] The description of the Room.
+    # @param encounter [Encounter or nil] A {Encounter} instance or nil if no
+    #   encounter happens on this Room.
+    # @param dungeon [Dungeon] The {Dungeon} to which this room belongs.
+    # @param lit [Boolean] If the room has a light source and is lit by it.
     def initialize(name, description, encounter, dungeon, lit = true)
       @id = ('room-' + name).slugify
       @name = name.capitalize
@@ -50,9 +58,9 @@ module Adventure
 
     private
 
-    def check_encounter(encounter)
+    def check_encounter(encount)
       msg = 'Encounter must be an Encounter instance'
-      raise ArgumentError, msg unless encounter.is_a? Encounter
+      raise ArgumentError, msg unless encount.is_a?(Encounter) || encount.nil?
 
       @encounter = encounter
     end
