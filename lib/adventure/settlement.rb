@@ -6,6 +6,20 @@ module Adventure
     attr_reader :id, :name, :population, :type, :wealth, :gp_limit
     attr_reader :demographics, :environment, :stores, :taverns, :houses
 
+    # Creates a new settlement, with all its contents.
+    #
+    # @param name [String] The name of the Settlement.
+    # @param population [Integer] The number of people on the Settlement,
+    #   minimum of 20 (less than that and its a large home, not a settlement).
+    # @param demographics [Array] An array in which each element must be an
+    #   array with two elements, the first a String of the race, the second an
+    #   Integer of the rough percentage this race represents. _E.g._:
+    #     [
+    #       ['humans', 90],
+    #       ['halflings', 6],
+    #       ['misc', 4]
+    #     ]
+    # @param environment [String] The environment surrounding the Settlement.
     def initialize(name, population, demographics, environment)
       check_params(population, demographics)
       check_name(name)
@@ -23,6 +37,9 @@ module Adventure
       @houses = []
     end
 
+    # Returns a description of the Settlement.
+    #
+    # @return [String] A description of the Settlement.
     def short_description
       "#{@name} is a #{@type.downcase} of #{@population} souls, most of which"\
       " are #{predominant_race}. The #{@type.downcase} is in a "\
