@@ -17,7 +17,7 @@ module Adventure
     #
     # @param room [Room] The entry {Room}.
     def first=(room)
-      raise ArgumentError, 'Must be a Room' unless room.is_a? Room
+      raise TypeError, 'Must be a Room' unless room.is_a? Room
 
       @first = room
     end
