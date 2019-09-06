@@ -3,13 +3,13 @@
 module Adventure
   # Defines and creates a settlement.
   class Settlement
-    attr_reader :name, :population, :type, :wealth, :gp_limit, :demographics
-    attr_reader :environment, :stores, :taverns, :houses
+    attr_reader :id, :name, :population, :type, :wealth, :gp_limit
+    attr_reader :demographics, :environment, :stores, :taverns, :houses
 
     def initialize(name, population, demographics, environment)
       check_params(population, demographics)
+      check_name(name)
 
-      @name = name
       @population = population.to_i
       @type, @gp_limit = type_limit
       @wealth = wealth_calc
@@ -86,6 +86,11 @@ module Adventure
     def check_params(pop, demo)
       raise ArgumentError, 'Two few people (min 20)' unless pop >= 20
       raise ArgumentError, 'Demographics must be a Hash' unless demo.is_a? Array
+    end
+
+    def check_name(name)
+      @id = ('settlement-' + name).slugify
+      @name = name
     end
   end
 end
