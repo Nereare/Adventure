@@ -15,9 +15,20 @@ A random adventure generator for D&D 5e.
 1. Get [the code](https://github.com/Nereare/Adventure/archive/master.zip);
 2. Have these installed:
     1. [Ruby](https://www.ruby-lang.org);
-    2. [Bundler](https://bundler.io/).
-3. Installing dependencies:
-    1. Run `bundle install`.
+    2. [Gem](https://rubygems.org/).
+3. Install [Bundler](https://bundler.io/) with `gem install bundler`;
+4. Install the dependencies with `bundle install`;
+5. Running not yet done, sorry... :cry:
+
+#### Testing
+
+```shell
+rubocop -a
+bundle exec rspec spec
+yardoc
+```
+
+These commands run the syntax checks (via [RuboCop](https://github.com/rubocop-hq/rubocop)), the [RSpec](https://rspec.info/) checks and outputs the documentation (via [YARD](https://yardoc.org/)).
 
 ## Contributing
 
