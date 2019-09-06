@@ -54,6 +54,7 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
     - `Actor` class, for creating NPC descriptions;
     - `Building` class, for creating general buildings, such as houses;
     - `Dungeon` class, which creates a dungeon to serve as a category to `Room`s;
+    - `Encounter` class, which creates the elements of a singleton encounter;
     - `Quest` class, for creating quests, their goals and rewards;
     - `Room` class, for creating steps of a dungeon or encounter arc;
     - `Settlement` class, for creating settlements and their contents.

@@ -56,8 +56,6 @@ module Adventure
 
     private
 
-    # @todo Implement Encounter class
-    # @body Implement this class to represent an encounter.
     def check_encounter(encount)
       msg = 'Encounter must be an Encounter instance'
       raise ArgumentError, msg unless encount.is_a?(Encounter) || encount.nil?
