@@ -23,9 +23,9 @@ module Adventure
       process_equipment
     end
 
-    def description
-      "#{pronoum(true)} is #{@align.indefinitize} #{@gender} #{@race}, whose "\
-      "hair is #{@hair}, with #{@eyes} eyes and #{@skin} skin. "\
+    def description(upcase = false)
+      "#{pronoum(upcase)} is #{@align.indefinitize} #{@gender} #{@race}, whose"\
+      " hair is #{@hair}, with #{@eyes} eyes and #{@skin} skin. "\
       "#{pronoum(true)} uses #{inventory}. #{@name} is "\
       "#{@personality.chomp '.'}."
     end
