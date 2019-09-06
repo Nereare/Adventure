@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'indefinite_article'
-
 module Adventure
   # Defines and creates rooms for dungeons and encounters.
   class Room
