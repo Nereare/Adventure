@@ -16,8 +16,6 @@ module Adventure
       check_dungeon(dungeon)
     end
 
-    # @todo Add first Room method
-    # @body Retrieve first dungeon room ID.
     def begin
       @dungeon.first
     end
