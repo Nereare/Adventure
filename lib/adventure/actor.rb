@@ -27,13 +27,11 @@ module Adventure
       @race = race
       @align = align
 
-      @hair, @eyes, @skin, @personality = desc
-
-      @equip = equipment
       @reference = ref
 
+      check_desc(desc)
       process_case
-      process_equipment
+      process_equipment(equipment)
     end
 
     # Constructs the description of the NPC in human-readable format.
@@ -89,11 +87,25 @@ module Adventure
       @personality = @personality.downcase
     end
 
-    def process_equipment
+    def process_equipment(equipment)
+      msg = 'Equipment must be an array'
+      raise ArgumentError, msg unless equipment.is_a? Array
+
+      @equip = equipment
       @equip.compact!
       @equip.each_with_index do |item, i|
         @equip[i] = item.downcase.indefinitize
       end
+    end
+
+    def check_desc(desc)
+      msg = 'Desc must be an Array'
+      raise ArgumentError, msg unless desc.is_a? Array
+
+      msg = 'Desc must have exactly four elements'
+      raise ArgumentError, msg unless desc.length == 4
+
+      @hair, @eyes, @skin, @personality = desc
     end
   end
 end
