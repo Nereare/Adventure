@@ -7,7 +7,5 @@ require 'adventure/quest'
 require 'adventure/settlement'
 
 # This is the main module of this Gem. It defines each component of an
-#   Adventure. The export of such adventure is located elsewhere.
-module Adventure
-  # Code here
-end
+# Adventure. The export of such adventure is located elsewhere.
+module Adventure; end
