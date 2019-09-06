@@ -20,7 +20,7 @@ A random adventure generator for D&D 5e.
 4. Install the dependencies with `bundle install`;
 5. Running not yet done, sorry... :cry:
 
-#### Testing
+### Testing
 
 ```shell
 rubocop -a
