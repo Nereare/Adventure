@@ -195,3 +195,44 @@ RSpec.describe Adventure::Building do
     end
   end
 end
+
+RSpec.describe Adventure::Dungeon do
+  context 'when creation follows documentation' do
+    let(:example) do
+      Adventure::Dungeon.new('Moria')
+    end
+
+    let!(:room) do
+      Adventure::Room.new(
+        'Secret Entrance',
+        'A dark entry after the moonscript doors',
+        nil,
+        example,
+        false
+      )
+    end
+
+    it 'creates dungeons' do
+      expect(example).not_to be nil
+      expect(example).to be_an Adventure::Dungeon
+    end
+
+    it 'appends entry-point rooms to dungeons' do
+      example.first = room
+      expect(example.first).not_to be nil
+      expect(example.first).to be_an Adventure::Room
+    end
+  end
+
+  context 'when creation ignores documentation' do
+    let(:example) do
+      Adventure::Dungeon.new('Moria')
+    end
+
+    it 'checks room paramenters' do
+      expect do
+        example.first = 'Error Room'
+      end .to raise_error TypeError
+    end
+  end
+end
