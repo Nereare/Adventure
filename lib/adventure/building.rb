@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'indefinite_article'
+require 'slugify'
 
 module Adventure
   # Defines and creates general buildings, such as houses and stores.
@@ -56,7 +57,10 @@ module Adventure
 
     def check_quests(quests)
       unless quests.nil?
-        raise ArgumentError, 'Quests must be an Array' unless quests.is_a? Array
+        msg = 'Quests must be an Array or nil'
+        raise ArgumentError, msg unless quests.is_a?(Array)
+
+        raise ArgumentError, 'Quests must be a non-empty Array' if quests.empty?
 
         msg = 'Each element of the quests array must be a Quest instance'
         quests.each do |quest|
