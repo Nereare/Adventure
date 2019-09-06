@@ -51,6 +51,7 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - Base module (`Adventure`):
     - `Actor` class, for creating NPC descriptions;
     - `Building` class, for creating general buildings, such as houses;
+    - `Quest` class, for creating quests, their goals and rewards;
     - `Settlement` class, for creating settlements and their contents.
 
 ### Changed

@@ -4,6 +4,7 @@ require 'adventure/version'
 
 require 'adventure/actor'
 require 'adventure/building'
+require 'adventure/quest'
 require 'adventure/settlement'
 
 module Adventure
