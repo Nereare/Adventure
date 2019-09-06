@@ -5,9 +5,10 @@ require 'indefinite_article'
 module Adventure
   # Defines and creates general buildings, such as houses.
   class Building
-    attr_reader :name, :location, :desc, :type, :owner, :quests
+    attr_reader :id, :name, :location, :desc, :type, :owner, :quests
 
     def initialize(name, location, desc, type, owner, quests)
+      @id = ('building-' + name).slugify
       @name = name
       @location = location
       @desc = desc
