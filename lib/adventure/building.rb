@@ -7,6 +7,17 @@ module Adventure
   class Building
     attr_reader :id, :name, :location, :desc, :type, :owner, :quests, :wares
 
+    # Creates a new building, be it a house, a tavern, or a store.
+    #
+    # @param name [String] The name of the house, tavern or store.
+    # @param location [String] Where the building is located in the village.
+    # @param desc [String] A description of the appearence of the building.
+    # @param type [String] What kind of building this is (_e.g._ house).
+    # @param owner [Actor] An {Actor} instance to own the building.
+    # @param quests [Array] Either nil for no quest or an array of {Quest}s.
+    # @param wares [Array] Either nil for no wares or an array, each element of
+    #   it being a two-element Array, the first the name of the ware, the second
+    #   the price of the ware (the price must be a String with the currency).
     def initialize(name, location, desc, type, owner, quests = nil, wares = nil)
       @id = ('building-' + name).slugify
       @name = name
@@ -20,6 +31,9 @@ module Adventure
       check_wares(wares)
     end
 
+    # Returns the full description of the building, with owner information.
+    #
+    # @return [String] A full description of the building.
     def description
       "This is #{@type.indefinitize} on #{@location}.\n\n#{@name} is owned by "\
       "#{@owner.name}, #{@owner.description}\n\n#{@desc.chomp('.')}."
