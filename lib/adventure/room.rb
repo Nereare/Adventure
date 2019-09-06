@@ -8,13 +8,14 @@ module Adventure
     attr_reader :id, :name, :lit, :description, :encounter
     attr_reader :north, :south, :east, :west, :up, :down
 
-    def initialize(name, description, encounter, lit = true)
+    def initialize(name, description, encounter, dungeon, lit = true)
       @id = ('room-' + name).slugify
       @name = name.capitalize
       @description = description
       @lit = lit
 
       check_encounter(encounter)
+      check_dungeon(dungeon)
     end
 
     def north=(room)
@@ -50,10 +51,17 @@ module Adventure
     private
 
     def check_encounter(encounter)
-      msg = 'Encounter must be and Encounter instance'
+      msg = 'Encounter must be an Encounter instance'
       raise ArgumentError, msg unless encounter.is_a? Encounter
 
       @encounter = encounter
+    end
+
+    def check_dungeon(dungeon)
+      msg = 'Dungeon must be a Dungeon instance'
+      raise ArgumentError, msg unless dungeon.is_a? Dungeon
+
+      @dungeon = dungeon
     end
 
     def check_room(room)
