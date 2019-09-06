@@ -8,7 +8,7 @@ require 'adventure/settlement'
 
 module Adventure
   # Sets the current version of the gem
-  @version = '0.14.4'
+  @version = '0.15.4'
 
   def self.version
     @version

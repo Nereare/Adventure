@@ -55,6 +55,7 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
     - `Building` class, for creating general buildings, such as houses;
     - `Dungeon` class, which creates a dungeon to serve as a category to `Room`s;
     - `Quest` class, for creating quests, their goals and rewards;
+    - `Room` class, for creating steps of a dungeon or encounter arc;
     - `Settlement` class, for creating settlements and their contents.
 
 ### Changed
