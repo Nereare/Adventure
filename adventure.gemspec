@@ -5,10 +5,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'adventure/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'Adventure'
+  spec.name          = 'adventure'
   spec.version       = Adventure.version
   spec.authors       = ['Igor Padoim']
   spec.email         = ['igorpadoim@gmail.com']
+  spec.license       = 'MIT'
 
   spec.summary       = 'A random adventure generator for D&D 5e.'
   spec.homepage      = 'https://github.com/Nereare/Adventure'

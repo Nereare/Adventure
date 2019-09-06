@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Adventure (0.16.7)
+    adventure (0.16.7)
       indefinite_article (~> 0.2.4)
       random_name_generator (~> 1.0.3)
       slugify (~> 1.0.6)
@@ -71,7 +71,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  Adventure!
+  adventure!
   bundler (~> 2.0)
   rake (~> 12.3)
   rspec (~> 3.0)
