@@ -26,16 +26,12 @@ module Adventure
     private
 
     def desc_header
-      "#{@name} is #{@type.indefinitize} on #{@location}."
+      "This is #{@type.indefinitize} on #{@location}."
     end
 
     def desc_owner
       "#{@name} is owned by #{@owner.name}, #{@owner.description}"
     end
-
-    # @todo Implement Quest class
-    # @body Implement the `Quest` class and implement this method.
-    def desc_quests; end
 
     def process_case
       @name = @name.capitalize
