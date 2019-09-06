@@ -6,6 +6,9 @@ module Adventure
   # Sets the current version of the gem
   @version = '0.15.6'
 
+  # Returns the Gem's current version.
+  #
+  # @return [String] The Gem's current version.
   def self.version
     @version
   end
