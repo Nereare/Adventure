@@ -3,6 +3,7 @@
 require 'adventure/version'
 
 require 'adventure/actor'
+require 'adventure/building'
 require 'adventure/settlement'
 
 module Adventure
