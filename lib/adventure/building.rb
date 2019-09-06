@@ -21,18 +21,11 @@ module Adventure
     end
 
     def description
-      "#{desc_header}\n\n#{desc_owner}\n\n#{@desc}"
+      "This is #{@type.indefinitize} on #{@location}.\n\n#{@name} is owned by "\
+      "#{@owner.name}, #{@owner.description}\n\n#{@desc.chomp('.')}."
     end
 
     private
-
-    def desc_header
-      "This is #{@type.indefinitize} on #{@location}."
-    end
-
-    def desc_owner
-      "#{@name} is owned by #{@owner.name}, #{@owner.description}"
-    end
 
     def process_case
       @name = @name.capitalize

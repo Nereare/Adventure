@@ -4,7 +4,7 @@
 # Adventure. The export of such adventure is located elsewhere.
 module Adventure
   # Sets the current version of the gem
-  @version = '0.15.4'
+  @version = '0.15.5'
 
   def self.version
     @version
