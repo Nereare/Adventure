@@ -3,11 +3,11 @@
 require 'indefinite_article'
 
 module Adventure
-  # Defines and creates general buildings, such as houses.
+  # Defines and creates general buildings, such as houses and stores.
   class Building
-    attr_reader :id, :name, :location, :desc, :type, :owner, :quests
+    attr_reader :id, :name, :location, :desc, :type, :owner, :quests, :wares
 
-    def initialize(name, location, desc, type, owner, quests)
+    def initialize(name, location, desc, type, owner, quests = nil, wares = nil)
       @id = ('building-' + name).slugify
       @name = name
       @location = location
@@ -17,6 +17,7 @@ module Adventure
       process_case
       check_owner(owner)
       check_quests(quests)
+      check_wares(wares)
     end
 
     def description
@@ -47,14 +48,24 @@ module Adventure
     end
 
     def check_quests(quests)
-      raise ArgumentError, 'Quests must be an Array' unless quests.is_a? Array
+      unless quests.nil?
+        raise ArgumentError, 'Quests must be an Array' unless quests.is_a? Array
 
-      msg = 'Each element of the quests array must be a Quest instance'
-      quests.each do |quest|
-        raise ArgumentError, msg unless quest.is_a? Quest
+        msg = 'Each element of the quests array must be a Quest instance'
+        quests.each do |quest|
+          raise ArgumentError, msg unless quest.is_a? Quest
+        end
       end
 
       @quests = quests
+    end
+
+    def check_wares(wares)
+      unless wares.nil?
+        raise ArgumentError, 'Wares must be an Array' unless wares.is_a? Array
+      end
+
+      @wares = wares
     end
   end
 end
