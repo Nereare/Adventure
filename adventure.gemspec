@@ -35,4 +35,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'indefinite_article', '~> 0.2.4'
   spec.add_dependency 'random_name_generator', '~> 1.0.3'
+  spec.add_dependency 'slugify', '~> 1.0.6'
 end

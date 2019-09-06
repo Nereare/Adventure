@@ -4,6 +4,7 @@ PATH
     Adventure (0.13.3)
       indefinite_article (~> 0.2.4)
       random_name_generator (~> 1.0.3)
+      slugify (~> 1.0.6)
 
 GEM
   remote: https://rubygems.org/
@@ -57,11 +58,12 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
+    slugify (1.0.7)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.6.0)
-    zeitwerk (2.1.9)
+    zeitwerk (2.1.10)
 
 PLATFORMS
   ruby

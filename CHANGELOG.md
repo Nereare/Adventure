@@ -45,8 +45,9 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
   - [RuboCop](https://github.com/rubocop-hq/rubocop), `v0.74.0`;
   - [SimpleCov](https://github.com/colszowka/simplecov), `v0.17.0`.
 * Dependencies:
-  - [indefinite Article](https://rubygems.org/gems/indefinite_article) gem, `v0.2.4`;
-  - [Random Name Generator](https://rubygems.org/gems/random_name_generator) gem, `v1.0.3`.
+  - [Indefinite Article](https://rubygems.org/gems/indefinite_article) gem, `v0.2.4`;
+  - [Random Name Generator](https://rubygems.org/gems/random_name_generator) gem, `v1.0.3`;
+  - [Slugify](https://rubygems.org/gems/slugify/versions/1.0.6) gem, `v1.0.6`.
 * Modules:
   - Base module (`Adventure`):
     - `Actor` class, for creating NPC descriptions;
