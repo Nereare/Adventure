@@ -4,7 +4,7 @@ module Adventure
   # Defines and creates a settlement.
   class Settlement
     attr_reader :id, :name, :population, :type, :wealth, :gp_limit
-    attr_reader :demographics, :environment, :stores, :taverns, :houses
+    attr_reader :demographics, :environment, :stores, :houses
 
     # Creates a new settlement, with all its contents.
     #
@@ -20,7 +20,7 @@ module Adventure
     #       ['misc', 4]
     #     ]
     # @param environment [String] The environment surrounding the Settlement.
-    def initialize(name, population, demographics, environment)
+    def initialize(name, population, demographics, environment, buildings)
       check_params(population, demographics)
       check_name(name)
 
@@ -30,11 +30,7 @@ module Adventure
       @demographics = demographics
       @environment = environment
 
-      # @todo Update buildings' generators
-      # @body Once the classes are developed, update these to their generators.
-      @stores = []
-      @taverns = []
-      @houses = []
+      check_buildings(buildings)
     end
 
     # Returns a description of the Settlement.
@@ -108,6 +104,30 @@ module Adventure
     def check_name(name)
       @id = ('settlement-' + name).slugify
       @name = name
+    end
+
+    def check_buildings(buildings)
+      msg = 'Building must be a Hash with two keys, and arrays under them'
+      raise ArgumentError, msg unless buildings.is_a? Hash
+
+      check_building_category('stores', buildings)
+      check_building_category('houses', buildings)
+
+      @stores = buildings['stores']
+      @houses = buildings['houses']
+    end
+
+    def check_building_category(cat, buildings)
+      msg = "Building must contain a list of houses under the '#{cat}' key."
+      raise ArgumentError, msg unless buildings.key?(cat)
+
+      msg = "Building must contain arrays under the '#{cat}' key."
+      raise ArgumentError, msg unless buildings[cat].is_a? Array
+
+      msg = 'Each element of the arrays must be an instance of Building'
+      buildings[cat].each do |lot|
+        raise ArgumentError, msg unless lot.is_a? Building
+      end
     end
   end
 end

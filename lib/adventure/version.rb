@@ -4,7 +4,7 @@
 # Adventure. The export of such adventure is located elsewhere.
 module Adventure
   # Sets the current version of the gem
-  @version = '0.16.6'
+  @version = '0.16.7'
 
   # Returns the Gem's current version.
   #
