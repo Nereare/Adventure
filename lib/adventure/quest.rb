@@ -18,12 +18,15 @@ module Adventure
 
     # @todo Add first Room method
     # @body Retrieve first dungeon room ID.
-    def begin; end
+    def begin
+      @dungeon.first
+    end
 
     private
 
     def check_dungeon(dungeon)
       raise ArgumentError, 'Must be a Dungeon' unless dungeon.is_a? Dungeon
+      raise Error, 'Must have a first room' unless dungeon.first.is_a? Room
 
       @dungeon = dungeon
     end
