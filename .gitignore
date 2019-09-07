@@ -145,6 +145,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/osx,ruby,linux,macos,windows,dropbox
-
-# MarkyMarkov Dictionaries
-*.mmd
