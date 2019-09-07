@@ -4,7 +4,7 @@ PATH
     adventure (0.16.7)
       indefinite_article (~> 0.2.4)
       random_name_generator (~> 1.0.3)
-      slugify (~> 1.0.6)
+      slugify (~> 1.0.7)
 
 GEM
   remote: https://rubygems.org/
@@ -74,7 +74,7 @@ DEPENDENCIES
   adventure!
   bundler (~> 2.0)
   rake (~> 12.3)
-  rspec (~> 3.0)
+  rspec (~> 3.8.0)
   rubocop (~> 0.74.0)
   simplecov (~> 0.17.0)
   yard (~> 0.9.20)
