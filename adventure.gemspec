@@ -35,6 +35,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.8.0'
 
   spec.add_dependency 'indefinite_article', '~> 0.2.4'
+  spec.add_dependency 'jekyll_slugify', '~> 0.4.2'
   spec.add_dependency 'random_name_generator', '~> 1.0.3'
-  spec.add_dependency 'slugify', '~> 1.0.7'
 end

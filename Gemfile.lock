@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    adventure (0.16.7)
+    adventure (0.17.7)
       indefinite_article (~> 0.2.4)
+      jekyll_slugify (~> 0.4.2)
       random_name_generator (~> 1.0.3)
-      slugify (~> 1.0.7)
 
 GEM
   remote: https://rubygems.org/
@@ -24,6 +24,8 @@ GEM
     indefinite_article (0.2.4)
       activesupport
     jaro_winkler (1.5.3)
+    jekyll_slugify (0.4.2)
+      i18n (~> 1.6.0)
     json (2.2.0)
     minitest (5.11.3)
     parallel (1.17.0)
@@ -58,7 +60,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    slugify (1.0.7)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
