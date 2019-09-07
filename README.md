@@ -7,6 +7,7 @@
 [![Build Status](https://travis-ci.org/Nereare/Adventure.svg?branch=master)](https://travis-ci.org/Nereare/Adventure)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Nereare/Adventure)](https://codeclimate.com/github/Nereare/Adventure)
 [![Code Climate coverage](https://img.shields.io/codeclimate/coverage/Nereare/Adventure)](https://codeclimate.com/github/Nereare/Adventure)
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/Nereare/Adventure)](https://libraries.io/github/Nereare/Adventure)
 
 A random adventure generator for D&D 5e.
 
