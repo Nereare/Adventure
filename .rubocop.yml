@@ -1,4 +1,7 @@
 # Custom RuboCop configs
+AllCops:
+  TargetRubyVersion: 2.5
+
 Metrics/ParameterLists:
   Enabled: false
 
