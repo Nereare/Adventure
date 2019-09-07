@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'indefinite_article'
-require 'slugify'
+require 'jekyll_slugify'
 
 require 'adventure/version'
 
