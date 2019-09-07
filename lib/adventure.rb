@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'indefinite_article'
+require 'slugify'
+
 require 'adventure/version'
 
 require 'adventure/actor'

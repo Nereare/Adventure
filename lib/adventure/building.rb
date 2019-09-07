@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'indefinite_article'
-require 'slugify'
-
 module Adventure
   # Defines and creates general buildings, such as houses and stores.
   class Building

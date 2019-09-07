@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'indefinite_article'
-
 module Adventure
   # Defines a singleton encounter (one that happens and finishes in a single
   # page).
