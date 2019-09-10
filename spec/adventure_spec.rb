@@ -290,3 +290,66 @@ RSpec.describe Adventure::Encounter do
     end
   end
 end
+
+RSpec.describe Adventure::Quest do
+  context 'when creation follows documentation' do
+    let(:example) do
+      dungeon = Adventure::Dungeon.new('Test Dungeon')
+
+      dungeon.first = Adventure::Room.new(
+        'Test Room',
+        'Test Description',
+        nil,
+        dungeon
+      )
+
+      Adventure::Quest.new(
+        'Test Name',
+        'Test Description',
+        'Test Goal',
+        'Test Reward',
+        dungeon
+      )
+    end
+
+    it 'creates quests' do
+      expect(example).not_to be nil
+      expect(example).to be_an Adventure::Quest
+    end
+
+    it 'outputs the entry-point room' do
+      expect(example.begin).not_to be nil
+      expect(example.begin).to be_an Adventure::Room
+    end
+  end
+
+  context 'when creation ignores documentation' do
+    let(:bad_example_1) do
+      Adventure::Quest.new(
+        'Test Name',
+        'Test Description',
+        'Test Goal',
+        'Test Reward',
+        'Not Dungeon'
+      )
+    end
+
+    let(:bad_example_2) do
+      Adventure::Quest.new(
+        'Test Name',
+        'Test Description',
+        'Test Goal',
+        'Test Reward',
+        Adventure::Dungeon.new('Errored Dungeon')
+      )
+    end
+
+    it 'checks for the dungeon parameter integrity' do
+      expect { bad_example_1 }.to raise_error ArgumentError
+    end
+
+    it 'checks for the dungeon paramenter first room integrity' do
+      expect { bad_example_2 }.to raise_error ArgumentError
+    end
+  end
+end
