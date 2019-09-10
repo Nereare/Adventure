@@ -236,3 +236,57 @@ RSpec.describe Adventure::Dungeon do
     end
   end
 end
+
+RSpec.describe Adventure::Encounter do
+  context 'when creation follows documentation' do
+    let(:example) do
+      Adventure::Encounter.new(
+        'Test Name',
+        [
+          ['Ghoul', 3, 'See MM pg.148'],
+          ['Ghast', 1, 'See MM pg.148']
+        ],
+        [1050, 240.8, 'No items']
+      )
+    end
+
+    it 'creates encounters' do
+      expect(example).not_to be nil
+      expect(example).to be_an Adventure::Encounter
+    end
+
+    it 'lists the monsters for itself' do
+      expect(example.enemies).not_to be nil
+      expect(example.enemies).to be_an Array
+    end
+  end
+
+  context 'when creation ignores documentation' do
+    let(:bad_example_1) do
+      Adventure::Encounter.new(
+        'Test Name',
+        'Errored Enemies',
+        [1050, 240.8, 'No items']
+      )
+    end
+
+    let(:bad_example_2) do
+      Adventure::Encounter.new(
+        'Test Name',
+        [
+          ['Ghoul', 3, 'See MM pg.148'],
+          ['Ghast', 1, 'See MM pg.148']
+        ],
+        'Errored Rewards'
+      )
+    end
+
+    it 'checks for the enemies parameter integrity' do
+      expect { bad_example_1 }.to raise_error ArgumentError
+    end
+
+    it 'checks for the reward parameter integrity' do
+      expect { bad_example_2 }.to raise_error ArgumentError
+    end
+  end
+end
