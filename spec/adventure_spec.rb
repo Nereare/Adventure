@@ -58,19 +58,38 @@ RSpec.describe Adventure::Actor do
       )
     end
 
+    let(:boromir) do
+      Adventure::Actor.new(
+        'Boromir',
+        'Male',
+        'Human',
+        'Lawful neutral',
+        [
+          'Blue',
+          'Brown',
+          'White',
+          'Prideful and honored'
+        ],
+        []
+      )
+    end
+
     it 'creates NPCs (Actors)' do
       expect(sam).not_to be nil
       expect(lady).not_to be nil
       expect(smeagol).not_to be nil
+      expect(boromir).not_to be nil
       expect(sam).to be_an Adventure::Actor
       expect(lady).to be_an Adventure::Actor
       expect(smeagol).to be_an Adventure::Actor
+      expect(boromir).to be_an Adventure::Actor
     end
 
     it 'describes NPCs (Actors)' do
       expect(sam.description).to be_a String
       expect(lady.description).to be_a String
       expect(smeagol.description).to be_a String
+      expect(boromir.description).to be_a String
     end
   end
 
