@@ -26,7 +26,7 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
 
 ## [Unreleased]
 
-## [0.17.7-pre] `2019-09-10`
+## [0.17.7-pre] - `2019-09-10`
 
 ### Added
 * Code of Conduct from [Contributor Covenant v1.4.1](https://www.contributor-covenant.org/).
