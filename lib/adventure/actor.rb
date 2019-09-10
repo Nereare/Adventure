@@ -48,6 +48,8 @@ module Adventure
     # @return [String] The inventory of the NPC.
     def inventory
       case @equip.length
+      when 0
+        'nothing'
       when 1
         @equip[0].to_s
       when 2
