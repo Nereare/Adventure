@@ -353,3 +353,95 @@ RSpec.describe Adventure::Quest do
     end
   end
 end
+
+RSpec.describe Adventure::Quest do
+  context 'when creation follows documentation' do
+    let(:example) do
+      dungeon = Adventure::Dungeon.new('Test Dungeon')
+
+      Adventure::Room.new(
+        'Test Room',
+        'Test Description',
+        nil,
+        dungeon
+      )
+    end
+
+    it 'creates rooms' do
+      expect(example).not_to be nil
+      expect(example).to be_an Adventure::Room
+    end
+
+    it 'appends rooms to itself' do
+      expect do
+        example.north = example
+        example.south = example
+        example.east = example
+        example.west = example
+        example.up = example
+        example.down = example
+      end .not_to raise_error
+      expect(example.north).not_to be nil
+      expect(example.north).to be_an Adventure::Room
+      expect(example.south).not_to be nil
+      expect(example.south).to be_an Adventure::Room
+      expect(example.east).not_to be nil
+      expect(example.east).to be_an Adventure::Room
+      expect(example.west).not_to be nil
+      expect(example.west).to be_an Adventure::Room
+      expect(example.up).not_to be nil
+      expect(example.up).to be_an Adventure::Room
+      expect(example.down).not_to be nil
+      expect(example.down).to be_an Adventure::Room
+    end
+
+    it 'removes room exists from itself' do
+      expect do
+        example.north = nil
+        example.south = nil
+        example.east = nil
+        example.west = nil
+        example.up = nil
+        example.down = nil
+      end .not_to raise_error
+      expect(example.north).to be nil
+      expect(example.south).to be nil
+      expect(example.east).to be nil
+      expect(example.west).to be nil
+      expect(example.up).to be nil
+      expect(example.down).to be nil
+    end
+  end
+
+  context 'when creation ignores documentation' do
+    let(:bad_example) do
+      Adventure::Room.new(
+        'Test Room',
+        'Test Description',
+        nil,
+        'Not Dungeon'
+      )
+    end
+
+    let(:example) do
+      dungeon = Adventure::Dungeon.new('Test Dungeon')
+
+      Adventure::Room.new(
+        'Test Room',
+        'Test Description',
+        nil,
+        dungeon
+      )
+    end
+
+    it 'checks for the dungeon parameter integrity' do
+      expect { bad_example }.to raise_error ArgumentError
+    end
+
+    it 'checks for the room integrity (or nil) when appending' do
+      expect do
+        example.north = 9
+      end .to raise_error ArgumentError
+    end
+  end
+end
