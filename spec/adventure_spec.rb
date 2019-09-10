@@ -45,7 +45,7 @@ RSpec.describe Adventure::Actor do
     let(:smeagol) do
       Adventure::Actor.new(
         'Smeagol',
-        'Neural',
+        'Neutral',
         'Halfling',
         'Chaotic neutral',
         [
