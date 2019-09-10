@@ -1,6 +1,6 @@
 # Adventure
 
-[![Gem](https://img.shields.io/gem/v/Adventure)](https://github.com/Nereare/Adventure)
+[![Gem](https://img.shields.io/gem/v/adventure)](https://github.com/Nereare/Adventure)
 [![Version](https://img.shields.io/badge/version-0.17.7--pre-yellowgreen)](https://github.com/Nereare/Adventure/releases)
 [![GitHub License](https://img.shields.io/github/license/Nereare/Adventure)](LICENSE.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE-OF-CONDUCT.md)
