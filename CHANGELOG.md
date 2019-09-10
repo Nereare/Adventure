@@ -72,5 +72,5 @@ Principles of a change log, excerpted from [Keep a Changelog](http://keepachange
 ### Fixed
 * `Slugify` method, previously from an unlicensed gem to an [MIT-licensed one](https://rubygems.org/gems/jekyll_slugify).
 
-[Unreleased]: https://github.com/Nereare/Grimoire/compare/v0.17.7-pre...HEAD
-[0.17.7-pre]: https://github.com/Nereare/Grimoire/releases/tag/v0.17.7-pre
+[Unreleased]: https://github.com/Nereare/Adventure/compare/v0.17.7-pre...HEAD
+[0.17.7-pre]: https://github.com/Nereare/Adventure/releases/tag/v0.17.7-pre
