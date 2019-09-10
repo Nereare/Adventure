@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    adventure (0.17.7)
+    adventure (0.17.7.pre.pre)
       indefinite_article (~> 0.2.4)
       jekyll_slugify (~> 0.4.2)
       random_name_generator (~> 1.0.3)
