@@ -20,6 +20,10 @@ module Adventure
     #       ['misc', 4]
     #     ]
     # @param environment [String] The environment surrounding the Settlement.
+    # @param buildings [Hash] The list of {Building}s of the Settlement, which
+    #   must be a Hash with two elements, each with a specific key: _stores_ and
+    #   _houses_. Each of this keys must contain an Array of Buildings, or an
+    #   empty Array if there are no building of that category on the Settlement.
     def initialize(name, population, demographics, environment, buildings)
       check_params(population, demographics)
       check_name(name)
