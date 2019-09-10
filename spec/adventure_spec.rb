@@ -464,3 +464,197 @@ RSpec.describe Adventure::Quest do
     end
   end
 end
+
+RSpec.describe Adventure::Settlement do
+  context 'when creation follows documentation' do
+    let(:example) do
+      npc = Adventure::Actor.new(
+        'Test NPC',
+        'Non-binary',
+        'Test Race',
+        'Test Align',
+        %w[Hair Eyes Skin Personality],
+        []
+      )
+
+      building = Adventure::Building.new(
+        'Test Building',
+        'Test Location',
+        'Test Description',
+        'Test Type',
+        npc
+      )
+
+      Adventure::Settlement.new(
+        'Test Small Town',
+        25,
+        [
+          ['Humans', 90],
+          ['Half-elves', 8],
+          ['Misc', 2]
+        ],
+        'Plains',
+        'stores' => [],
+        'houses' => [building]
+      )
+    end
+
+    let(:hamlet) do
+      Adventure::Settlement.new(
+        'Test hamlet',
+        90,
+        [['Humans', 100]],
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    let(:village) do
+      Adventure::Settlement.new(
+        'Test village',
+        500,
+        [['Humans', 100]],
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    let(:small_town) do
+      Adventure::Settlement.new(
+        'Test small_town',
+        1_000,
+        [['Humans', 100]],
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    let(:large_town) do
+      Adventure::Settlement.new(
+        'Test large_town',
+        3_000,
+        [['Humans', 100]],
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    let(:small_city) do
+      Adventure::Settlement.new(
+        'Test small_city',
+        6_000,
+        [['Humans', 100]],
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    let(:large_city) do
+      Adventure::Settlement.new(
+        'Test large_city',
+        13_000,
+        [['Humans', 100]],
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    let(:metropolis) do
+      Adventure::Settlement.new(
+        'Test metropolis',
+        30_000,
+        [['Humans', 100]],
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    it 'creates settlements' do
+      expect(example).not_to be nil
+      expect(example).to be_an Adventure::Settlement
+    end
+
+    it 'creates all sizes of settlements' do
+      expect(hamlet).not_to be nil
+      expect(hamlet).to be_an Adventure::Settlement
+
+      expect(village).not_to be nil
+      expect(village).to be_an Adventure::Settlement
+
+      expect(small_town).not_to be nil
+      expect(small_town).to be_an Adventure::Settlement
+
+      expect(large_town).not_to be nil
+      expect(large_town).to be_an Adventure::Settlement
+
+      expect(small_city).not_to be nil
+      expect(small_city).to be_an Adventure::Settlement
+
+      expect(large_city).not_to be nil
+      expect(large_city).to be_an Adventure::Settlement
+
+      expect(metropolis).not_to be nil
+      expect(metropolis).to be_an Adventure::Settlement
+    end
+
+    it 'describes settlement from given paramenters' do
+      expect(example.short_description).not_to be nil
+      expect(example.short_description).to be_a String
+    end
+  end
+end
+
+RSpec.describe Adventure::Settlement do
+  context 'when creation ignores documentation' do
+    let(:bad_example_1) do
+      Adventure::Settlement.new(
+        'Test hamlet',
+        10,
+        [['Humans', 100]],
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    let(:bad_example_2) do
+      Adventure::Settlement.new(
+        'Test hamlet',
+        90,
+        'Bad Demographics',
+        'Plains',
+        'stores' => [],
+        'houses' => []
+      )
+    end
+
+    let(:bad_example_3) do
+      Adventure::Settlement.new(
+        'Test hamlet',
+        90,
+        [['Humans', 100]],
+        'Plains',
+        'Bad Buildings'
+      )
+    end
+
+    it 'checks for the minimum population required' do
+      expect { bad_example_1 }.to raise_error ArgumentError
+    end
+
+    it 'checks for the demographics parameter integrity' do
+      expect { bad_example_2 }.to raise_error ArgumentError
+    end
+
+    it 'checks for the buildings parameter integrity' do
+      expect { bad_example_3 }.to raise_error ArgumentError
+    end
+  end
+end
