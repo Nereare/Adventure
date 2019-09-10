@@ -3,7 +3,8 @@
 module Adventure
   # Defines and creates NPCs.
   class Quest
-    attr_reader :name, :description, :goal, :reward, :dungeon
+    attr_reader :name, :description, :goal, :reward
+    attr_accessor :dungeon
 
     # Creates a new instance of Quest.
     #
@@ -31,8 +32,11 @@ module Adventure
     private
 
     def check_dungeon(dungeon)
-      raise ArgumentError, 'Must be a Dungeon' unless dungeon.is_a? Dungeon
-      raise Error, 'Must have a first room' unless dungeon.first.is_a? Room
+      msg = 'Dungeon must be a Dungeon'
+      raise ArgumentError, msg unless dungeon.is_a? Dungeon
+
+      msg = 'Dungeon must have a first Room'
+      raise ArgumentError, msg unless dungeon.first.is_a? Room
 
       @dungeon = dungeon
     end
