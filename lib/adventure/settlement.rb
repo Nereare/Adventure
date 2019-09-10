@@ -43,8 +43,8 @@ module Adventure
     def short_description
       "#{@name} is a #{@type.downcase} of #{@population} souls, most of which"\
       " are #{predominant_race}. The #{@type.downcase} is in a "\
-      "#{@environment.downcase}, with #{@stores.length} stores, "\
-      "#{@taverns.length} taverns and #{@houses.length} houses of note."
+      "#{@environment.downcase}, with #{@stores.length} stores and "\
+      "#{@houses.length} houses of note."
     end
 
     private
