@@ -56,7 +56,7 @@ This project uses [SemVer](http://semver.org/) for versioning. For the versions 
 
 [![MIT License](https://i.imgur.com/Ze3dFob.png)](LICENSE.md)
 
-This project is available under the [MIT License](https://opensource.org/licenses/MIT)
+This project is available under the [MIT License](https://opensource.org/licenses/MIT).
 
 [![d20 Logo](https://i.imgur.com/8CG0VEv.png)](OGL.md)
 
