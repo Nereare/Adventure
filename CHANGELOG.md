@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 * Bumped [RuboCop](https://github.com/rubocop-hq/rubocop) version to `0.75.0`.
+* Changed license to the [Hippocratic License](https://firstdonoharm.dev/).
 
 ## [0.17.7-pre] - `2019-09-10`
 

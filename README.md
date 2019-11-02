@@ -1,8 +1,8 @@
 # Adventure
 
-[![Gem](https://img.shields.io/gem/v/adventure)](https://github.com/Nereare/Adventure)
-[![Version](https://img.shields.io/badge/version-0.17.7--pre-yellowgreen)](https://github.com/Nereare/Adventure/releases)
-[![GitHub License](https://img.shields.io/github/license/Nereare/Adventure)](LICENSE.md)
+[![Gem](https://img.shields.io/gem/v/adventure)](https://rubygems.org/gems/adventure)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/Nereare/Adventure)](https://github.com/Nereare/Adventure/releases)
+[![License](https://img.shields.io/badge/license-Hippocratic%20License%20v1.2-red)](LICENSE.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE-OF-CONDUCT.md)
 
 [![Build Status](https://travis-ci.org/Nereare/Adventure.svg?branch=master)](https://travis-ci.org/Nereare/Adventure)
@@ -54,9 +54,9 @@ This project uses [SemVer](http://semver.org/) for versioning. For the versions 
 
 ## Legal Stuff
 
-[![MIT License](https://i.imgur.com/Ze3dFob.png)](LICENSE.md)
+[![Hippocratic License](https://i.imgur.com/DEKS3nm.png)](LICENSE.md)
 
-This project is available under the [MIT License](https://opensource.org/licenses/MIT).
+This project is available under the [Hippocratic License](https://firstdonoharm.dev/).
 
 [![d20 Logo](https://i.imgur.com/8CG0VEv.png)](OGL.md)
 

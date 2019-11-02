@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version       = Adventure.version
   spec.authors       = ['Igor Padoim']
   spec.email         = ['igorpadoim@gmail.com']
-  spec.license       = 'MIT'
+  spec.license       = 'Hippocratic'
 
   spec.summary       = 'A random adventure generator for D&D 5e.'
   spec.homepage      = 'https://github.com/Nereare/Adventure'

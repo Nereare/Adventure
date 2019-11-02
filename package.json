@@ -1,0 +1,21 @@
+{
+  "name": "Adventure",
+  "description": "A random adventure generator for D&D 5e.",
+  "version": "0.17.8-pre",
+  "maintainers": [
+    {
+      "name": "Igor Padoim",
+      "email": "igorpadoim@gmail.com",
+      "web": "https://nereare.github.io/"
+    }
+  ],
+  "bugs": {
+    "web": "https://github.com/Nereare/Adventure/issues"
+  },
+  "licenses": [
+    {
+      "name": "Hippocratic License",
+      "url": "https://firstdonoharm.dev/"
+    }
+  ]
+}
