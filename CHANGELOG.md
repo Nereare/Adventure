@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.17.8-pre] - `2019-10-02`
+
 ### Changed
 * Bumped [RuboCop](https://github.com/rubocop-hq/rubocop) version to `0.75.0`.
 * Changed license to the [Hippocratic License](https://firstdonoharm.dev/).
@@ -57,5 +59,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 * `Slugify` method, previously from an unlicensed gem to an [MIT-licensed one](https://rubygems.org/gems/jekyll_slugify).
 
-[Unreleased]: https://github.com/Nereare/Adventure/compare/v0.17.7-pre...HEAD
+[Unreleased]: https://github.com/Nereare/Adventure/compare/v0.17.8-pre...HEAD
+[0.17.8-pre]: https://github.com/Nereare/Adventure/compare/v0.17.7-pre...v0.17.8-pre
 [0.17.7-pre]: https://github.com/Nereare/Adventure/releases/tag/v0.17.7-pre
